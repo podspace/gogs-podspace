@@ -1,4 +1,4 @@
-FROM podspace
+FROM alpine:3.3
 MAINTAINER jp@roemer.im
 
 # Install system utils & Gogs runtime dependencies
@@ -9,7 +9,7 @@ RUN chmod +x /usr/sbin/gosu \
 ENV GOGS_CUSTOM /data/gogs
 
 COPY . /app/gogs/
-WORKDIR /app/gogs/
+WORKDIR /app/gogs/s
 RUN ./docker/build.sh
 
 # Configure LibC Name Service
