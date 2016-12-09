@@ -5,6 +5,7 @@ MAINTAINER jp@roemer.im
 ADD https://github.com/tianon/gosu/releases/download/1.9/gosu-amd64 /usr/sbin/gosu
 RUN chmod +x /usr/sbin/gosu \
  && yum install ca-certificates bash git linux-pam s6 curl openssh socat tzdata
+RUN echo "y"
 
 ENV GOGS_CUSTOM /data/gogs
 
