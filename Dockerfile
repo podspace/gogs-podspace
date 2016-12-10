@@ -12,5 +12,4 @@ RUN yum install tar \
 EXPOSE 3000
 EXPOSE 3306
 
-RUN cd /opt/gogs
-RUN ./gogs web
+CMD /opt/gogs/gogs\ web
