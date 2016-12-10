@@ -13,4 +13,4 @@ EXPOSE 3000
 EXPOSE 3306
 
 RUN cd /opt/gogs
-RUN ["./gogs web"]
+RUN ["gogs"]
