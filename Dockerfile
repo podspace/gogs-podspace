@@ -14,4 +14,4 @@ EXPOSE 8443
 EXPOSE 9418
 EXPOSE 29418
 
-cmd ["/opt/gogs/gogs"]
+cmd ["/opt/gogs/gogs web"]
