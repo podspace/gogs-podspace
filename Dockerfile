@@ -12,4 +12,4 @@ RUN yum install tar \
 EXPOSE 3000
 EXPOSE 3306
 
-CMD ["/opt/gogs/gogs"]
+CMD ["ll"]
