@@ -2,14 +2,17 @@ FROM podspace
 MAINTAINER podspace
 
 RUN yum install tar \
-&& curl -L -O https://dl.gogs.io/gogs_v0.9.97_linux_386.tar.gz \
 && yum clean all \
 && rm -rf /var/cache/yum \
+&& curl -L -O https://dl.gogs.io/gogs_v0.9.97_linux_386.tar.gz \
 && tar -zxvf gogs_v0.9.97_linux_386.tar.gz -C /opt \
 && chmod g+rwX /opt/gogs \
 && chmod +x /opt/gogs/gogs
 
+ENV GOGS_HOME /opt/gogs
+WORKDIR ${GOGS_HOME}
+
 EXPOSE 3000
 EXPOSE 3306
 
-CMD ["ll"]
+CMD ["/opt/gogs/gogs"]
