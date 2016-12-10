@@ -10,5 +10,6 @@ RUN yum install tar \
 && chmod +x /opt/gogs
 
 EXPOSE 3000
+EXPOSE 3306
 
-cmd ["/opt/gogs/gogs web"]
+RUN /opt/gogs/gogs web
