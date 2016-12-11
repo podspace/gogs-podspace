@@ -1,1 +1,3 @@
-# gogs-dockerfile
+# Docker image for GOGS on PodSpace
+
+
