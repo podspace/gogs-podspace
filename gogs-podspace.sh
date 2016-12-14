@@ -5,11 +5,11 @@ RUN_USER="git"
 LOG_ROOT_PATH="/data/log"
 DB_PATH="/data/db/gogs.db"
 GOGS="/opt/gogs/gogs"
+APP_URL=""
 
 : ${ADMIN_USERNAME:="gogs"}
 : ${ADMIN_PASSWORD:="admin"}
 : ${ADMIN_EMAIL:="admin@" }
-: ${APP_URL:="http://gogs.apps.podspace.hu"}
 
 mkdir -p /data/repositories
 mkdir -p /data/log
@@ -17,7 +17,7 @@ mkdir -p /data/db
 
 # Kill background processes on exit
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
-
+s
 # Start up GOGS 
 $GOGS web &
 # Wait until it starts up
