@@ -5,7 +5,7 @@ RUN_USER="git"
 LOG_ROOT_PATH="/data/log"
 DB_PATH="/data/db/gogs.db"
 GOGS="/opt/gogs/gogs"
-APP_URL="http://smth.apps.podspace.hu"
+APP_URL="http://gogs.apps.podspace.hu"
 
 : ${ADMIN_USERNAME:="gogs"}
 : ${ADMIN_PASSWORD:="admin"}
