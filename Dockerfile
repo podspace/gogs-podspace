@@ -16,8 +16,8 @@ EXPOSE 3000
 
 RUN yum -y install git \
  && yum clean all \
- && curl -L -O https://dl.gogs.io/gogs_v0.9.97_linux_amd64.tar.gz \
- && tar -zxvf gogs_v0.9.97_linux_amd64.tar.gz -C /opt \
+ && curl -L -O https://dl.gogs.io/gogs_v${GOGS_VERSION}_linux_amd64.tar.gz \
+ && tar -zxvf gogs_v${GOGS_VERSION}_linux_amd64.tar.gz -C /opt \
  && adduser -u 1001 -g 0 -M -d /opt/gogs git
 
 ADD ./gogs-podspace.sh /opt/gogs/
