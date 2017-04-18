@@ -3,7 +3,7 @@ MAINTAINER PodSpace Admin <admin@podspace.io>
 
 # TODO: store all persistent data under /data ("custom" dir., "data" dir., maybe the logs too?)
 
-ENV GOGS_VERSION=0.9.97 \
+ENV GOGS_VERSION=0.9.141 \
     USER=git \
     USERNAME=git
 
